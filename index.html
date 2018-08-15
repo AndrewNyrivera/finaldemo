@@ -1,0 +1,733 @@
+
+<!DOCTYPE html>
+<html lang='en' class=''>
+    <head>
+        <link rel="shortcut icon" href="images/logo.png" size="32x32">
+        <script src='//static.codepen.io/assets/editor/live/console_runner-ce3034e6bde3912cc25f83cccb7caa2b0f976196f2f2d52303a462c826d54a73.js'></script><script src='//static.codepen.io/assets/editor/live/css_live_reload_init-e9c0cc5bb634d3d14b840de051920ac153d7d3d36fb050abad285779d7e5e8bd.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" /><link rel="mask-icon" type="" href="//static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" /><link rel="canonical" href="https://codepen.io/adethrax/pen/vEwmzO" />
+        <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'><link rel='stylesheet' href='https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css'><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css'><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.2/owl.theme.css'><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.2/owl.carousel.min.css'>
+    <style class="cp-pen-styles">
+    
+    html,
+    body {
+        height: 100%;
+    }
+    
+    body {
+        padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    
+    .img-portfolio {
+        margin-bottom: 30px;
+    }
+    
+    .img-hover:hover {
+        opacity: 0.8;
+    }
+    
+    /* Home Page Carousel */
+    
+    header.carousel {
+        height: 85%;
+    }
+    
+    header.carousel .item,
+    header.carousel .item.active,
+    header.carousel .carousel-inner {
+        height: 100%;
+    }
+    
+    header.carousel .fill {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    /* 404 Page Styles */
+    
+    .error-404 {
+        font-size: 100px;
+    }
+    
+    /* Pricing Page Styles */
+    
+    .price {
+        display: block;
+        font-size: 50px;
+        line-height: 50px;
+    }
+    
+    .price sup {
+        top: -20px;
+        left: 2px;
+        font-size: 20px;
+    }
+    
+    .period {
+        display: block;
+        font-style: italic;
+    }
+    
+    /* Footer Styles */
+    
+    footer {
+        margin: 50px 0;
+    }
+    
+    /* Responsive Styles */
+    
+    @media(max-width:991px) {
+        .customer-img,
+        .img-related {
+            margin-bottom: 30px;
+        }
+    }
+    
+    @media(max-width:767px) {
+        .img-portfolio {
+            margin-bottom: 15px;
+        }
+    
+        header.carousel .carousel {
+            height: 50%;
+        }
+    }
+    
+    
+    .sectiona { 
+      background: url(http://coolblackppt.com/wp-content/uploads/2013/08/Abstract-dark-textures-floral-floral-texture-fresh-new-hd-wallpaper.jpg);
+      width: 100%;
+      background-attachment: fixed;
+    }
+    
+    
+    .sectionb { background: #d0d0d0;    width: 100%;}
+    
+    
+    .facontainer {
+      width: auto;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+    }
+    
+    
+    
+     .facontainer a {color: #000;
+      -webkit-transition: all 0.2s ease; /* Safari compatibility */
+        transition: all 0.2s ease; /* not recognised in IE9 and below */}
+    .facontainer a:hover {color: #87d0b0;
+          -webkit-transition: all 0.2s ease; /* Safari compatibility */
+        transition: all 0.2s ease; /* not recognised in IE9 and below */}
+    
+    .facontainer h2 {
+        color: #FFF;
+        text-align: center;
+        margin-bottom: 26px;
+        line-height: 60px;
+        font-size: 56px;
+        margin-bottom: 20px;
+        letter-spacing: -2px;
+        color: #000;
+       font-family: "Roboto",sans-serif;
+    }
+    
+    .facontainer p {
+        color: #000;
+        text-align: center;
+        font-size: 18px;
+        width: 80%;
+        margin: 20px auto;
+        line-height: 24px;
+       font: 14px/24px "Roboto",sans-serif;
+    }
+    
+    .facontainer i {
+        background: #45906F;
+        border-radius: 50%;
+        margin-bottom: 10px;
+        width: 90px;
+        height: 90px;
+        padding: 15px;
+    }
+    
+    .facontainer li {
+      color: #000;
+      display: inline-block;
+      font-size: 60px;
+    }
+    
+    .facontainer li:hover { 
+      color: #006237;
+    }
+    
+    
+    #owl-demo {background:#fff;}
+    
+        #owl-demo .item{
+        display: block;
+        padding: 54px 0px;
+        margin: 5px;
+        color: #000;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        text-align: center;
+        }
+        #owl-demo .left{
+        text-align: left;
+        margin-bottom: 10px;
+        }
+        #owl-demo .left .btn {
+        display: block;
+        }
+    #owl-demo h2 {
+    font: 600 24px/28px "Open Sans",sans-serif;
+    color: #99BF38;
+    }
+    
+    #owl-demo p {
+      font: italic 300 24px/28px "Open Sans",sans-serif;
+      color: #2B3A42;
+    }
+    </style>
+    <style>
+        
+            .parallax { 
+                /* The image used */
+                background-image: url("images/landscape.jpg");
+            
+                /* Set a specific height */
+                height: 500px; 
+            
+                /* Create the parallax scrolling effect */
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            </style>
+            
+            </head><body>
+    
+    <html lang="en">
+    
+    <head>
+    
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+    
+        <title>Our Goal</title>
+    
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+        <!-- Custom CSS -->
+        <link href="css/modern-business.css" rel="stylesheet">
+    
+        <!-- Custom Fonts -->
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <style>
+                /* Center the loader */
+                .page-header {
+                    color: white;
+                }
+                #loader {
+                  position: absolute;
+                  left: 50%;
+                  top: 50%;
+                  z-index: 1;
+                  width: 150px;
+                  height: 150px;
+                  margin: -75px 0 0 -75px;
+                  border: 16px solid #f3f3f3;
+                  border-radius: 50%;
+                  border-top: 16px solid #3498db;
+                  width: 120px;
+                  height: 120px;
+                  -webkit-animation: spin 2s linear infinite;
+                  animation: spin 2s linear infinite;
+                }
+         
+                @-webkit-keyframes spin {
+                  0% { -webkit-transform: rotate(0deg); }
+                  100% { -webkit-transform: rotate(360deg); }
+                }
+         
+                @keyframes spin {
+                  0% { transform: rotate(0deg); }
+                  100% { transform: rotate(360deg); }
+                }
+         
+                /* Add animation to "page content" */
+                .animate-bottom {
+                  position: relative;
+                  -webkit-animation-name: animatebottom;
+                  -webkit-animation-duration: 1s;
+                  animation-name: animatebottom;
+                  animation-duration: 1s
+                }
+         
+                @-webkit-keyframes animatebottom {
+                  from { bottom:-100px; opacity:0 }
+                  to { bottom:0px; opacity:1 }
+                }
+         
+                @keyframes animatebottom {
+                  from{ bottom:-100px; opacity:0 }
+                  to{ bottom:0; opacity:1 }
+                }
+         
+                #myDiv {
+                  display: none;
+                  text-align: center;
+                }
+                </style>
+    
+    </head>
+    
+    <body onload="myFunction()" style="margin:0;"></body>
+    
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="file:///C:/Users/ASC%20Student/Documents/finaldemo/index.html"><img src="images/logo.png" height="35" width="35"> </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="services.html">Services</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.google.com/gmail/about/#">Contact</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="portfolio-1-col.html">1 Column Portfolio</a>
+                                </li>
+                                <li>
+                                    <a href="portfolio-2-col.html">2 Column Portfolio</a>
+                                </li>
+                                <li>
+                                    <a href="portfolio-3-col.html">3 Column Portfolio</a>
+                                </li>
+                                <li>
+                                    <a href="portfolio-4-col.html">4 Column Portfolio</a>
+                                </li>
+                                <li>
+                                    <a href="portfolio-item.html">Single Portfolio Item</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="blog-home-1.html">Blog Home 1</a>
+                                </li>
+                                <li>
+                                    <a href="blog-home-2.html">Blog Home 2</a>
+                                </li>
+                                <li>
+                                    <a href="blog-post.html">Blog Post</a>
+                                </li>
+                            </ul>
+                        </li>
+   
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="full-width.html">Full Width Page</a>
+                                </li>
+                                <li>
+                                    <a href="sidebar.html">Sidebar Page</a>
+                                </li>
+                                <li>
+                                    <a href="faq.html">FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="404.html">404</a>
+                                </li>
+                                <li>
+                                    <a href="pricing.html">Pricing Table</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+    
+        <!-- Header Carousel -->
+    
+        <header id="myCarousel" class="carousel slide">
+            <!-- Indicators -->
+          
+    
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                 <a href="http://truthfromthetap.com/setting-the-record-straight-on-private-water-and-flint/?gclid=EAIaIQobChMI9vbdkqfv3AIVSl8NCh1glAeOEAAYASAAEgKw_vD_BwE">   <div class="fill" style="background-image:url('images/flintwater.jpg');"></div>
+                    
+                </div></a>  
+                <div class="item">
+                    <div class="fill" style="background-image:url('images/Animal.jpg');"></div>
+                  
+                </div>
+                <div class="item">
+                    <div class="fill" style="background-image:url('images/gorrila.jpg');"></div>
+                   
+                </div>
+            </div>
+    
+            <!-- Controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+               
+            </a>
+        </header>
+    
+     <div class="parallax">
+        <!-- Page Content -->
+        <div class="container">
+    
+            <!-- Marketing Icons Section -->
+            <div id="backgroundthing">
+            <div class="row">
+               <section class="wow fadeInRight" data-wow-delay="0.5s">
+                <div class="col-lg-12">
+                    <br>
+                    <br>
+                    <h1 class="page-header">
+                        Welcome to EcoSmart
+                    </h1>
+            </div>
+              </section>
+            </div>  
+                <div class="col-md-4">
+                   <section class="wow fadeInDown" data-wow-delay="0.5s" >
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4><i ></i> Flint Water Crisis</h4>
+                        </div>
+                        <div class="panel-body">
+                            <p>The people of Flint need your help in order to survive. As of right now clean water would be considered a luxury in Flint, whereas elsewhere it would be seen as an expectation. With your help we can begin to help the people suffering in Flint and make clean water for them an expectation once more.</p>
+                            <a href="articlepage" class="btn btn-default">Learn More</a>
+                        </div>
+                    </div>
+                  </section>
+                </div>
+              
+                <div class="col-md-4">
+                  <section class="wow fadeInDown" data-wow-delay="0.5s">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4><i ></i>ASPCA</h4>
+                        </div>
+                        <div class="panel-body">
+                            <p>The American Society for the Prevention of Cruelty to Animals® (ASPCA) is a national leader in the areas of rescue, adoption and welfare and has worked tirelessly for over 150 years to put an end to animal abuse and neglect. Our nationwide work includes:</p>
+                            <a href="#" class="btn btn-default">Learn More</a>
+                        </div>
+                    </div>
+                  </section>
+                </div>
+              
+              
+                <div class="col-md-4">
+                  <section class="wow fadeInDown" data-wow-delay="0.5s">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4><i ></i>Rain Forest Trust </h4>
+                        </div>
+                        <div class="panel-body">
+                            <p>On Africa’s west coast lies the nation of Cameroon, whose unparalleled natural beauty and biodiversity make it one of the most biologically rich countries on the continent. Sometimes called ‘Africa in miniature,’ Cameroon boasts a diverse array of coastal, mountain, rainforest and savanna habitats that shelter a vast assortment of wildlife, many of which are endangered and found nowhere else.</p>
+                            <a href="#" class="btn btn-default">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                  
+               </section>
+            </div>
+            <!-- /.row -->
+    
+            <!-- Portfolio Section -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="wow fadeInRight" data-wow-delay="0.5s">
+                        <h2 class="page-header" style="color:black;">Organizations</h2>
+                    </section>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <section class="wow fadeInDown" data-wow-delay="0.5s">
+                    <a href="portfolio-item.html">
+                        <img class="img-responsive img-portfolio img-hover" src="images/dirtywater.png" alt="">
+                    </a>
+                  </section>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                <section class="wow fadeInDown" data-wow-delay="0.5s">
+                    <a href="portfolio-item.html">
+                        <img class="img-responsive img-portfolio img-hover" src="images/cat2.png" alt="">
+                    </a>
+                    </section>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                <section class="wow fadeInDown" data-wow-delay="0.5s">
+                    <a href="portfolio-item.html">
+                        <img class="img-responsive img-portfolio img-hover" src="images/elephant.jpg" alt="">
+                    </a>
+                 </section>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                <section class="wow fadeInDown" data-wow-delay="0.5s">
+                    <a href="portfolio-item.html">
+                        <img class="img-responsive img-portfolio img-hover" src="images/awater.jpg" alt="">
+                    </a>
+                </section>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                <section class="wow fadeInDown" data-wow-delay="0.5s">
+                    <a href="portfolio-item.html">
+                        <img class="img-responsive img-portfolio img-hover" src="images/gorrila3.jpg" alt="">
+                    </a>
+                </section>    
+                </div>
+                <div class="col-md-4 col-sm-6">
+                <section class="wow fadeInDown" data-wow-delay="0.5s">
+                    <a href="portfolio-item.html">
+                        <img class="img-responsive img-portfolio img-hover" src="images/food.jpg" alt="">
+                    </a>
+                    </section>
+                </div>
+            </div>
+            <!-- /.row -->
+    
+            <!-- Features Section -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="wow fadeInRight" data-wow-delay="0.5s">
+                        <h2 class="page-header">Our Goal</h2>
+                    </section>
+                </div>
+
+                <div class="col-md-6">
+                    <div id="parallax2">
+                <section class="wow fadeInDown" data-wow-delay="0.5s">
+                    <p>Goals:</p>
+                    <ul>
+                        <li>Help people in need</li>
+                        <li>Help animals in need</li>
+                        <li>Help the environment</li>
+                        <li>Expose people to the problems in the world</li>
+                        <li>Help make the world a better place</li>
+                    </ul>
+                    <p></p>
+                 </section>   
+                </div></div>
+                <div class="col-md-6">
+                    <section class="wow fadeInDown" data-wow-delay="0.5s">
+                        <img class="img-responsive" src="images/me.JPG" alt="">
+                    </section>
+                </div>
+            </div>
+            <!-- /.row -->
+    
+            <hr>
+    
+            <!-- Call to Action Section -->
+            <div class="well">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3>Donate Today</h3>
+                    </div>
+                    <div class="col-md-4">
+                        <a class="btn btn-lg btn-default btn-block" href="#">Donate</a>
+                    </div>
+                </div>
+            </div>
+    
+            <hr>
+    
+            
+    
+        </div>
+        <!-- /.container -->
+      
+      <div class="sectiona">
+             <!-- Portfolio Section -->
+            
+            <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="wow fadeInRight" data-wow-delay="0.5s">
+                        <h2 class="page-header">Images</h2>
+                    </section>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <section class="wow fadeInDown" data-wow-delay="0.5s">
+                    <a href="portfolio-item.html">
+                        <img  height="450" width="700" class="img-responsive img-portfolio img-hover" src="images/Animal.jpg" height="450" width="700" alt="">
+                    </a>
+                  </section>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                <section class="wow fadeInDown" data-wow-delay="0.5s">
+                    <a href="portfolio-item.html">
+                        <img height="450" width="700"  class="img-responsive img-portfolio img-hover" src="images/animal2.jpg" height="450" width="700" alt="">
+                    </a>
+                    </section>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                <section class="wow fadeInDown" data-wow-delay="0.5s">
+                    <a href="portfolio-item.html">
+                        <img height="450" width="700" class="img-responsive img-portfolio img-hover" src="images/badwater.jpg" height="450" width="700" alt="">
+                    </a>
+                 </section>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                <section class="wow fadeInDown" data-wow-delay="0.5s">
+                    <a href="portfolio-item.html">
+                        <img class="img-responsive img-portfolio img-hover" src="images/badwater.jpg" height="450" width="700" alt="">
+                    </a>
+                </section>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                <section class="wow fadeInDown" data-wow-delay="0.5s">
+                    <a href="portfolio-item.html">
+                        <img class="img-responsive img-portfolio img-hover" src="images/gorrila.jpg" height="450" width="700" alt="">
+                    </a>
+                </section>    
+                </div>
+                <div class="col-md-4 col-sm-6">
+                <section class="wow fadeInDown" data-wow-delay="0.5s">
+                    <a href="portfolio-item.html">
+                        <img class="img-responsive img-portfolio img-hover" src="images/gorrila2.jpg" height="450" width="700" alt="">
+                    </a>
+                    </section>
+                </div>
+            </div>
+            
+            </div>
+        
+        
+    
+    <div id="owl-demo" class="owl-carousel owl-theme">
+      <div class="item"><h2>Flint Water Crisis </h2><p>"Donate Now… </p>
+      </div>
+        <div class="item"><h2>ASPCA </h2><p>"Donate Now… </p>
+      </div>
+        <div class="item"><h2>Rain Forest Trust</h2><p>"Donate Now… </p>
+      </div>
+    </div>
+    
+    
+    
+    
+      
+        <div class="sectionb">
+          <div class="container"><link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    
+    <div class="facontainer">
+       <section class="wow fadeInDown" data-wow-delay="0.2s"><h2>Get in touch</h2></section>
+      <section class="wow fadeInDown" data-wow-delay="0.2s">
+      <h3>Connect Here</h3></section>
+      
+    <li class="wow fadeInDown" data-wow-delay="0.6s"><a target="_blank" href="https://plus.google.com/discover">
+      <i class="bd-ra fa fa-google-plus"></i></a>
+      </li> 
+    <li class="wow fadeInDown" data-wow-delay="0.8s"><a target="_blank" href="https://twitter.com/?lang=en">
+      <i class="bd-ra fa fa-twitter"></i></a>
+      </li>
+     <li class="wow fadeInDown" data-wow-delay="1s"><a target="_blank" href="https://www.facebook.com/">
+       <i class="fa fa-facebook"></i></a>
+      </li>
+         <li class="wow fadeInDown" data-wow-delay="1.2s"><a target="_blank" href="https://www.pinterest.com/">
+           <i class="bd-ra fa fa-pinterest"></i></a>
+      </li>
+         <li class="wow fadeInDown" data-wow-delay="1.4s"><a href="https://www.linkedin.com/">
+           <i class="bd-ra fa fa-linkedin"></i></a>
+      </li>
+    </div></div>
+        </div>   
+        
+            <!-- /.row -->
+      </div>
+    
+        <!-- jQuery -->
+        <script src="js/jquery.js"></script>
+    
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+    
+        <!-- Script to Activate the Carousel -->
+        <script>
+        $('.carousel').carousel({
+            interval: 5000 //changes the speed
+        })
+        </script>
+    
+    </body>
+    
+    </html>
+    
+    <script src='//static.codepen.io/assets/common/stopExecutionOnTimeout-41c52890748cd7143004e05d3c5f786c66b19939c4500ce446314d1748483e13.js'></script><script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script><script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.0/wow.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.2/owl.carousel.js'></script>
+    <script >new WOW().init();
+    
+    
+    
+    
+    
+    $(document).ready(function () {
+    
+      $("#owl-demo").owlCarousel({
+    
+        autoPlay: 3000, //Set AutoPlay to 3 seconds
+        navigation: true, // Show next and prev buttons
+        slideSpeed: 300,
+        paginationSpeed: 400,
+        singleItem: true
+    
+        // "singleItem:true" is a shortcut for:
+        // items : 1,
+        // itemsDesktop : false,
+        // itemsDesktopSmall : false,
+        // itemsTablet: false,
+        // itemsMobile : false
+      });
+    
+    
+    });
+    //# sourceURL=pen.js
+    </script>
+
+    </body></html>
